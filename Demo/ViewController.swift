@@ -47,9 +47,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension UIViewController:YMPayViewDelegate{
-    public func protocolDidBtn(view: YMPayView) {
-        print("protocol")
+extension ViewController: YMPayViewDelegate {
+    func protocolDidClick(view: YMPayView) {
+        print("---> protocol")
     }
     
 }

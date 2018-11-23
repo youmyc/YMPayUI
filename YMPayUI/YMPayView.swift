@@ -11,7 +11,7 @@ import UIKit
 fileprivate let kCellId = "kCellId"
 
 public protocol YMPayViewDelegate {
-    func protocolDidBtn(view:YMPayView)
+    func protocolDidClick(view:YMPayView)
 }
 
 public class YMPayView: UIView {
@@ -207,7 +207,7 @@ extension YMPayView: YMFooterViewDelegate {
     
     func protocolDidBtn(view: YMFooterView) {
         if delegate != nil {
-            delegate?.protocolDidBtn(view: self)
+            delegate?.protocolDidClick(view: self)
         }
     }
     
