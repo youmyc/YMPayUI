@@ -54,7 +54,10 @@ public enum PayStyle:Int {
 
 
 func resoucearrayFromFile(fileName: String) -> [[String:Any]] {
-    let jsonPath = Bundle.main.path(forResource: fileName, ofType: nil)
+    
+    let jsonPath = bundle?.path(forResource: fileName, ofType: nil)
+    
+//    let jsonPath = Bundle.main.path(forResource: fileName, ofType: nil)
     
     guard let path = jsonPath else {
         return [[String: Any]]()

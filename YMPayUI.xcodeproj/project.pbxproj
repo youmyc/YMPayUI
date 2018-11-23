@@ -24,7 +24,6 @@
 		0E1EF35F21A3AA04002ABFB6 /* YMPayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF34821A3AA04002ABFB6 /* YMPayModel.swift */; };
 		0E1EF36021A3AA04002ABFB6 /* YMPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF34921A3AA04002ABFB6 /* YMPayView.swift */; };
 		0E1EF37021A3AA04002ABFB6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF35A21A3AA04002ABFB6 /* Common.swift */; };
-		0E1EF3AE21A3AA3D002ABFB6 /* pay.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E1EF3AD21A3AA3D002ABFB6 /* pay.json */; };
 		0E1EF3F421A3B5F1002ABFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF3F321A3B5F1002ABFB6 /* AppDelegate.swift */; };
 		0E1EF3F621A3B5F1002ABFB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF3F521A3B5F1002ABFB6 /* ViewController.swift */; };
 		0E1EF3F921A3B5F1002ABFB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1EF3F721A3B5F1002ABFB6 /* Main.storyboard */; };
@@ -52,7 +51,6 @@
 		0E8D2C0421A69BA700776228 /* PayUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8D2BFB21A69BA700776228 /* PayUI.framework */; };
 		0E8D2C0B21A69BA700776228 /* PayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D2C0A21A69BA700776228 /* PayUITests.swift */; };
 		0E8D2C0D21A69BA700776228 /* PayUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8D2BFD21A69BA700776228 /* PayUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E8D2C1821A69BD200776228 /* pay.json in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF3AD21A3AA3D002ABFB6 /* pay.json */; };
 		0E8D2C1921A69BD200776228 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF35A21A3AA04002ABFB6 /* Common.swift */; };
 		0E8D2C1A21A69BD200776228 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF34521A3AA03002ABFB6 /* extension.swift */; };
 		0E8D2C1B21A69BD200776228 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EF34721A3AA04002ABFB6 /* UIColor+Extensions.swift */; };
@@ -146,7 +144,6 @@
 		0E1EF34821A3AA04002ABFB6 /* YMPayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMPayModel.swift; sourceTree = "<group>"; };
 		0E1EF34921A3AA04002ABFB6 /* YMPayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMPayView.swift; sourceTree = "<group>"; };
 		0E1EF35A21A3AA04002ABFB6 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		0E1EF3AD21A3AA3D002ABFB6 /* pay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pay.json; sourceTree = "<group>"; };
 		0E1EF3F121A3B5F1002ABFB6 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E1EF3F321A3B5F1002ABFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E1EF3F521A3B5F1002ABFB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -293,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				0E8D2BF321A6998100776228 /* YMPayUIBundle.bundle */,
-				0E1EF3AD21A3AA3D002ABFB6 /* pay.json */,
 				0E1EF35A21A3AA04002ABFB6 /* Common.swift */,
 				0E1EF34521A3AA03002ABFB6 /* extension.swift */,
 				0E1EF34721A3AA04002ABFB6 /* UIColor+Extensions.swift */,
@@ -665,7 +661,6 @@
 				0E1EF32121A3A9CB002ABFB6 /* LaunchScreen.storyboard in Resources */,
 				0E1EF31E21A3A9CB002ABFB6 /* Assets.xcassets in Resources */,
 				0E8D2BF421A6998100776228 /* YMPayUIBundle.bundle in Resources */,
-				0E1EF3AE21A3AA3D002ABFB6 /* pay.json in Resources */,
 				0E1EF43021A3F13B002ABFB6 /* YMPayCell.xib in Resources */,
 				0E1EF31C21A3A9BA002ABFB6 /* Main.storyboard in Resources */,
 			);
@@ -819,7 +814,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E165EF621A7A6E100318AC2 /* YMFooterView.swift in Sources */,
-				0E8D2C1821A69BD200776228 /* pay.json in Sources */,
 				0E8D2C1921A69BD200776228 /* Common.swift in Sources */,
 				0E8D2C1A21A69BD200776228 /* extension.swift in Sources */,
 				0E8D2C1B21A69BD200776228 /* UIColor+Extensions.swift in Sources */,
