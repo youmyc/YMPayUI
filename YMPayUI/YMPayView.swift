@@ -10,8 +10,18 @@ import UIKit
 
 fileprivate let kCellId = "kCellId"
 
-public class YMPayView: UIView {
+public protocol YMPayViewDelegate {
+    func protocolDidBtn(view:YMPayView)
+}
 
+public class YMPayView: UIView {
+    
+    public var delegate:YMPayViewDelegate?
+    
+    public var isAgree:Bool = true
+    
+    fileprivate var footerV:YMFooterView?
+    
     fileprivate var tableView:UITableView?
     
     fileprivate var selRow:Int? = 0
@@ -65,13 +75,16 @@ public class YMPayView: UIView {
         
         super.init(frame: frame)
         
+        footerV = YMFooterView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 57))
+        footerV?.delegate = self
+        
         setData()
         
         tableView = UITableView(frame: bounds)
         tableView?.isScrollEnabled = false
         tableView?.tableHeaderView = headerV
         tableView?.width = ym_screen_width
-        tableView?.tableFooterView = UIView()
+        tableView?.tableFooterView = footerV
         tableView?.dataSource = self
         tableView?.delegate = self
         tableView?.separatorColor = UIColor.init(valueRGB: 0xf0f0f0, alpha: 1)
@@ -115,7 +128,7 @@ public class YMPayView: UIView {
         }
         
         let count = source.count
-        self.frame = CGRect(x: 0, y: self.frame.origin.y, width: ym_screen_width, height: 26 + 50 * CGFloat(count))
+        self.frame = CGRect(x: 0, y: self.frame.origin.y, width: ym_screen_width, height: 26 + 50 * CGFloat(count) + 57)
         tableView?.frame = bounds
     }
     
@@ -185,4 +198,17 @@ extension YMPayView: UITableViewDataSource, UITableViewDelegate{
         
         cell.selIV.image = UIImage(named: "单选框-选中", in: bundle, compatibleWith: nil)
     }
+}
+
+extension YMPayView: YMFooterViewDelegate {
+    func agreeDidBtn(view: YMFooterView, btn: UIButton) {
+        isAgree = btn.isSelected
+    }
+    
+    func protocolDidBtn(view: YMFooterView) {
+        if delegate != nil {
+            delegate?.protocolDidBtn(view: self)
+        }
+    }
+    
 }

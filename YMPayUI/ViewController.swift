@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         payView = YMPayView.init(frame: CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 50))
         payView?.isApplePay = true
         payView?.payStyle = .Wechat
+        payView?.delegate = self
 //        payView?.huabeiStaging("(免手续费：¥462.08／期x12期)")
         view.addSubview(payView!)
     }
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
         guard let payStyle = payView?.payStyle else {
             return
         }
+        
+        print("-->\(payView?.isAgree ?? true)")
         
         switch payStyle {
         case .Huabei:
@@ -44,3 +47,9 @@ class ViewController: UIViewController {
     }
 }
 
+extension UIViewController:YMPayViewDelegate{
+    public func protocolDidBtn(view: YMPayView) {
+        print("protocol")
+    }
+    
+}

@@ -68,3 +68,21 @@ func resoucearrayFromFile(fileName: String) -> [[String:Any]] {
     }
     return [[String: Any]]()
 }
+
+
+///获取当前控制器
+func currentVc() ->UIViewController{
+    
+    var vc = UIApplication.shared.keyWindow?.rootViewController
+    
+    if (vc?.isKind(of: UITabBarController.self))! {
+        vc = (vc as! UITabBarController).selectedViewController
+    }else if (vc?.isKind(of: UINavigationController.self))!{
+        vc = (vc as! UINavigationController).visibleViewController
+    }else if ((vc?.presentedViewController) != nil){
+        vc =  vc?.presentedViewController
+    }
+    
+    return vc!
+    
+}

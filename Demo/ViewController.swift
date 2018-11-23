@@ -11,15 +11,45 @@ import PayUI
 
 class ViewController: UIViewController {
 
+    var payView:YMPayView? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let payView = YMPayView.init(frame: CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 50))
-        
-        view.addSubview(payView)
+        payView = YMPayView.init(frame: CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 50))
+        payView?.delegate = self
+        view.addSubview(payView!)
         
     }
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        guard let payStyle = payView?.payStyle else {
+            return
+        }
+        
+        print("-->\(payView?.isAgree ?? true)")
+        
+        switch payStyle {
+        case .Huabei:
+            print("Huabei")
+        case .ApplePay:
+            print("ApplePay")
+        case .AliPay:
+            print("AliPay")
+        case .Wechat:
+            print("Wechat")
+        case .LLPay:
+            print("LLPay")
+        case .None:
+            print("请选择支付方式")
+        }
+    }
 }
 
+extension UIViewController:YMPayViewDelegate{
+    public func protocolDidBtn(view: YMPayView) {
+        print("protocol")
+    }
+    
+}
