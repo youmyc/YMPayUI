@@ -1,0 +1,32 @@
+ [
+     {
+         "name": "花呗分期",
+         "icon": "押金-蚂蚁花呗",
+         "type": "huabei",
+         "des":""
+     },
+    {
+        "name": "Apple Pay",
+        "icon": "",
+        "type": "apple",
+        "des":""
+    },
+    {
+        "name": "支付宝支付",
+        "icon": "支付宝支付",
+        "type": "alipay",
+        "des":""
+    },
+    {
+        "name": "微信支付",
+        "icon": "微信支付",
+        "type": "wechat",
+        "des":""
+    },
+    {
+        "name": "银行卡支付",
+        "icon": "银行卡支付",
+        "type": "bank",
+        "des":""
+    }
+]
